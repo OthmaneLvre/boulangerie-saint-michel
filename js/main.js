@@ -31,6 +31,7 @@ if (form) {
             }
         
         } catch (error) {
+            console.error(error);
             feedback.textContent = "Erreur réseau. Veuillez réessayer.";
             feedback.classList.add("error");
         }
