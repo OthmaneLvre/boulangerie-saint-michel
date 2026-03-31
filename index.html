@@ -22,7 +22,10 @@
     <header class="site-header">
         <div class="container">
             <nav class="navbar" aria-label="Navigation principale">
-                <a href="#hero" class="logo">Boulangerie Saint-Michel</a>
+                <a href="#hero" class="logo">
+                    <span class="logo-mark">BSM</span>
+                    <span class="logo-text">Boulangerie Saint-Michel</span>
+                </a>
 
                 <ul class="nav-list">
                     <li><a href="#about">À propos</a></li>
@@ -30,6 +33,8 @@
                     <li><a href="#gallery">Galerie</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
+
+                <a href="#contact" class="nav-cta">Commander / Contacter</a>
             </nav>
         </div>
     </header>
@@ -39,16 +44,40 @@
         <!-- Section hero -->
         <section id="hero" class="hero">
             <div class="container">
-                <p class="hero-subtitle">Boulangerie artisanale locale</p>
-                <h1>Pains, viennoiseries et douceurs préparés avec passion</h1>
-                <p class="hero-text">
-                    Chaque jour, nous fabriquons des produits artisanaux à partir d'ingrédients
-                    sélectionnés avec soin pour offrir un authenticité, gourmandise et qualité.
-                </p>
+                <div class="hero-layout">
+                    <div class="hero-content">
+                        <p class="hero-subtitle">Boulangerie artisanale locale</p>
+                        <h1>Pains, viennoiseries et douceurs préparés avec passion</h1>
+                        <p class="hero-text">
+                            Chaque jour, nous fabriquons des produits artisanaux à partir d'ingrédients
+                            sélectionnés avec soin pour offrir un authenticité, gourmandise et qualité.
+                        </p>
 
-                <div class="hero-actions">
-                    <a href="#products" class="btn btn-primary">Découvrir nos produits</a>
-                    <a href="#contact" class="btn btn-secondary">Nous contacter</a>
+                        <div class="hero-actions">
+                            <a href="#products" class="btn btn-primary">Découvrir nos produits</a>
+                            <a href="#contact" class="btn btn-secondary">Nous contacter</a>
+                        </div>
+
+                        <ul class="hero-highlights">
+                            <li>Fabrication artisanale</li>
+                            <li>Produits frais chaque jour</li>
+                            <li>Accueil chaleureux</li>
+                        </ul>
+                    </div>
+
+                    <div class="hero-visual">
+                        <div class="hero-card hero-card-main">
+                            <span class="hero-card-label">Spécialité maison</span>
+                            <h2>Pain de campagne & viennoiseries pur beurre</h2>
+                            <p>
+                                Une sélection préparée chaque matin pour offrir fraîcheur,
+                                authenticité et gourmandise à chaque visite.
+                            </p>
+                        </div>
+
+                        <div class="hero-badge hero-badge-top">Artisanal</div>
+                        <div class="hero-badge hero-badge-bottom">Frais du jour</div>
+                    </div>
                 </div>
             </div>
         </section>
