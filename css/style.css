@@ -535,15 +535,77 @@ p {
    Footer
    ================================ */
 .site-footer {
-    padding: 2rem 0;
+    padding: 4rem 0 2rem;
     background-color: var(--color-footer);
+    color: #f5eee6;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.footer-col h3,
+.footer-col h4 {
+    margin-bottom: 1rem;
+    color: #ffffff;
     text-align: center;
 }
 
-.site-footer p {
-    margin-bottom: 0;
-    color: #f7efe6;
+.footer-col p {
+    color: #d8cfc6;
+    font-size: 0.95rem;
+    text-align: center;
 }
+
+.footer-col ul {
+    padding: 0;
+    text-align: center;
+}
+
+.footer-col ul a {
+    color: #d8cfc6;
+    transition: var(--transition);
+}
+
+.footer-col ul a:hover {
+    color: #ffffff;
+}
+
+/* Bas footer */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Signature */
+.footer-signature {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-signature span {
+    font-size: 0.85rem;
+    color: #cbbfb4;
+}
+
+.footer-signature img {
+    height: 28px;
+    object-fit: contain;
+}
+
 
 /* ================================
    Responsive
@@ -619,6 +681,19 @@ p {
 
     section {
         padding: 4rem 0;
+    }
+
+    .footer-grid{
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+
+    .footer-signature {
+        justify-content: center;
     }
 }
 
