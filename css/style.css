@@ -1,0 +1,379 @@
+/* ==================================
+    Variable globales
+    ================================= */
+:root {
+    --color-primary: #8b5e3c;
+    --color-primary-dark: #6f472b;
+    --color-secondary: #f4e7d3;
+    --color-accent: #d9b382;
+    --color-background: #fffaf3;
+    --color-surface: #ffffff;
+    --color-text: #2f241d;
+    --color-text-light: #6e6258;
+    --color-border: #e7d8c8;
+    --color-footer: #2b2019;
+
+    --font-main: Arial, Helvetica, sans-serif;
+
+    --container-width: 1200px;
+    --radius: 14px;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+    --transition: 0.3s ease;
+}
+
+/* ==================================
+    Reset de base
+    ================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Défilement fluide vers les ancres */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Base générale du document */
+body {
+    font-family: var(--font-main);
+    background-color: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+/* Images responsives */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Liens */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Listes sans puces */
+ul {
+    list-style: none;
+}
+
+/* ==================================
+    Classes utilitaires
+    ================================= */
+.container {
+    width: min(90%, var(--container-width));
+    margin: 0 auto;
+}
+
+.section-heading {
+    max-width: 700px;
+    margin-bottom: 2rem;
+}
+
+.section-subtitle {
+    color: var(--color-primary);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+section {
+    padding: 5rem 0;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: clamp(2.2rem, 4vw, 4rem);
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+}
+
+h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1rem;
+    color: var(--color-text-light);
+}
+
+/* ==================================
+    Boutons
+    ================================= */
+.btn {
+    display: inline-block;
+    padding: 0.95rem 1.4rem;
+    border-radius: 999px;
+    font-weight: bold;
+    transition: var(--transition);
+    border: 2px solid transparent;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-dark);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-primary);
+    color: #ffffff;
+}
+
+/* ================================
+   Header / Navigation
+   ================================ */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(255, 250, 243, 0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.navbar {
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--color-primary);
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav-list a {
+    position: relative;
+    font-weight: 600;
+    color: var(--color-text);
+    transition: var(--transition);
+}
+
+.nav-list a:hover {
+    color: var(--color-primary);
+}
+
+/* ================================
+   Hero
+   ================================ */
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(
+        135deg,
+        rgba(244, 231, 211, 0.9),
+        rgba(255, 250, 243, 1)
+    );
+}
+
+.hero-subtitle {
+    color: var(--color-primary);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hero-text {
+    max-width: 700px;
+    font-size: 1.05rem;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* ================================
+   About
+   ================================ */
+.about {
+    background-color: var(--color-surface);
+}
+
+/* ================================
+   Products
+   ================================ */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.products-card {
+    background-color: var(--color-surface);
+    padding: 2rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow);
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.products-card:hover {
+    transform: translateY(-5px);
+}
+
+/* ================================
+   Gallery
+   ================================ */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.gallery-item {
+    min-height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    border-radius: var(--radius);
+    border: 1px dashed var(--color-accent);
+    background-color: var(--color-secondary);
+    color: var(--color-primary-dark);
+    font-weight: bold;
+}
+
+/* ================================
+   Contact
+   ================================ */
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.contact-info,
+.contact-form {
+    background-color: var(--color-surface);
+    padding: 2rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 0.95rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    font: inherit;
+    color: var(--color-text);
+    background-color: #ffffff;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: 2px solid rgba(139, 94, 60, 0.2);
+    border-color: var(--color-primary);
+}
+
+/* ================================
+   Footer
+   ================================ */
+.site-footer {
+    padding: 2rem 0;
+    background-color: var(--color-footer);
+    text-align: center;
+}
+
+.site-footer p {
+    margin-bottom: 0;
+    color: #f7efe6;
+}
+
+/* ================================
+   Responsive
+   ================================ */
+@media (max-width: 992px) {
+    .products-grid,
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        justify-content: center;
+        padding: 1rem 0;
+    }
+
+    .nav-list {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 5rem 0;
+    }
+
+    section {
+        padding: 4rem 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .products-grid,
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+    }
+}
