@@ -8,13 +8,13 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
 }
 
 // Nettoyage des données
-function clean_input($data) {
+function cleanInput($data) {
     return htmlspecialchars(trim($data));
 }
 
-$name = clean_input($_POST["name"] ?? "");
-$email = clean_input($_POST["email"] ?? "");
-$message = clean_input($_POST["message"] ?? "");
+$name = cleanInput($_POST["name"] ?? "");
+$email = cleanInput($_POST["email"] ?? "");
+$message = cleanInput($_POST["message"] ?? "");
 
 // Validtion simple
 $errors = [];
