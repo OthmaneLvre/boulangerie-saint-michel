@@ -519,6 +519,18 @@ p {
     border-color: var(--color-primary);
 }
 
+#form-feedback {
+    margin-top: 1rem;
+    font-weight: 600;
+}
+
+#form-feedback.success {
+    color: green;
+}
+
+#form-feedback.error {
+    color: red;
+}
 /* ================================
    Footer
    ================================ */
